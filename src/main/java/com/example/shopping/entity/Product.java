@@ -5,10 +5,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.Date;
+import java.util.List;
 
 @Data
 @Builder
@@ -19,11 +18,18 @@ import javax.persistence.Id;
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     private String name;
 
-    private String price;
+    private String price; // double ?
 
-    private String expirationDate;
+    @Column(nullable = true)
+    private Date expirationDate;
+
+    @OneToMany
+    @JoinColumn(name="product_ID")
+    private List<Review> review_ID;
+
+
 }

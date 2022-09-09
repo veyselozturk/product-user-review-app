@@ -6,7 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Size;
+import java.util.List;
+
 
 @Data
 @Builder
@@ -18,17 +19,23 @@ import javax.validation.constraints.Size;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
-    @Size(max=50)
+    @Column(length = 50)
     private String name;
 
-    @Size(max=50)
+    @Column(length = 50)
     private String surname;
 
-    @Size(max=50)
+    @Column(length = 50)
     private String email;
 
-    @Size(max=15)
+    @Column(length = 15)
     private String phone;
+
+    @OneToMany
+    @JoinColumn(name="user_ID")
+    private List<Review> review_ID;
+
+
 }

@@ -5,11 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 @Data
 @Builder
@@ -20,15 +20,20 @@ import javax.validation.constraints.Size;
 public class Review {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id; //string olması hem ilişkisel hem nonilişkisel
 
-    @Size(max=500)
+    @Column(length = 500)
     private String review;
 
-    private String reviewDate;
+    private Date reviewDate;
 
     private String productId;
 
     private String userId;
 
+    @ManyToOne
+    private Product product_ID;
+
+    @ManyToOne
+    private User user_ID;
 }
