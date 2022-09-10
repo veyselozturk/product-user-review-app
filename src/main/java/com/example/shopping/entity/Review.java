@@ -32,8 +32,10 @@ public class Review {
     private String userId;
 
     @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product_ID;
 
     @ManyToOne
+    @JoinColumn(name = "user_id")
     private User user_ID;
 }

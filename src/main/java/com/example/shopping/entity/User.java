@@ -33,8 +33,8 @@ public class User {
     @Column(length = 15)
     private String phone;
 
-    @OneToMany
-    @JoinColumn(name="user_ID")
+    @OneToMany(mappedBy = "user_ID")
+    @JoinColumn(name="review_ID")
     private List<Review> review_ID;
 
 
