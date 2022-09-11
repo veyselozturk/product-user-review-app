@@ -27,9 +27,9 @@ public class Product {
     @Column(nullable = true)
     private Date expirationDate;
 
-    @OneToMany(mappedBy = "product_ID")
-    @JoinColumn(name="review_ID")
-    private List<Review> review_ID;
+    @OneToMany
+    @JoinColumn
+    private List<Review> reviewId;
 
 
 }

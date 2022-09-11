@@ -22,20 +22,16 @@ public class Review {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //string olması hem ilişkisel hem nonilişkisel
 
-    @Column(length = 500)
+    @Size(max=500)
     private String review;
 
     private Date reviewDate;
 
-    private String productId;
-
-    private String userId;
+    @ManyToOne
+    @JoinColumn
+    private Product productId;
 
     @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product_ID;
-
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user_ID;
+    @JoinColumn
+    private User userId;
 }

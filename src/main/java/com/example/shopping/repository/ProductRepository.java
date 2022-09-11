@@ -9,6 +9,6 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, String> {
+public interface ProductRepository extends JpaRepository<Product, Long> {
     List<Product> findProductsByExpirationDateAfter(Date date);
 }

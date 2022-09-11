@@ -9,10 +9,11 @@ import java.util.Date;
 import java.util.List;
 
 @Repository
-public interface ReviewRepository extends JpaRepository<Review, String> {
-    List<Review> findReviewsByReviewDateBetweenAndProduct_ID
-            (Date date1, Date date2, Long product_ID);
+public interface ReviewRepository extends JpaRepository<Review, Long> {
+    List<Review> findReviewsByReviewDateBetweenAndProductId
+            (Date minDate, Date maxDate, Long productId);
 
-    List<Review> findReviewsByReviewDateBetweenAndUser_ID
-            (Date date1, Date date2, Long user_ID);
+    List<Review> findReviewsByReviewDateBetweenAndUserId
+            (Date minDate, Date maxDate, Long userId);
+
 }

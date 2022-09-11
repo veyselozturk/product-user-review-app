@@ -14,7 +14,7 @@ import java.util.Date;
 public class ReviewResponse {
     private Long id ;
     private String review;
-    private Date commentDate;
+    private Date reviewDate;
     private Long product_id;
     private Long user_id;
 }

@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.util.List;
 
 
@@ -21,21 +22,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(length = 50)
+    @Size(max=50)
     private String name;
 
-    @Column(length = 50)
+    @Size(max=50)
     private String surname;
 
-    @Column(length = 50)
+    @Size(max=50)
     private String email;
 
-    @Column(length = 15)
+    @Size(max=15)
     private String phone;
 
-    @OneToMany(mappedBy = "user_ID")
-    @JoinColumn(name="review_ID")
-    private List<Review> review_ID;
+    @OneToMany
+    @JoinColumn
+    private List<Review> reviewId;
 
 
 }

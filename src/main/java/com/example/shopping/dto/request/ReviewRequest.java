@@ -14,8 +14,11 @@ import java.util.List;
 @AllArgsConstructor
 public class ReviewRequest {
 
-    private Long product_ID;
+    private Long id;
+    private String review;
+    private Date reviewDate;
     private List<Date> dateRange;
-    private Long user_ID;
+    private Long productId;
+    private Long userId;
 
 }
