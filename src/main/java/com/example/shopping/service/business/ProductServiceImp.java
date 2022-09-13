@@ -118,12 +118,17 @@ public class ProductServiceImp implements ProductService {
     public List<ProductResponse> findProductsByExpirationAfter(ProductRequest request) {
         Date localDate = new Date();
         var list = productRepository.findAll();
-        var expirationAfterList= list.stream().filter(product -> product.getExpirationDate().after(localDate)).toList();
-        var nullControlList= list.stream().filter(product -> product.getExpirationDate().equals(null)).toList();
-        var findProductsByExpirationAfter = Stream.concat(expirationAfterList.stream(), nullControlList.stream())
+        var expirationAfterList= list.stream()
+                                                .filter(product -> product.getExpirationDate().after(localDate))
+                                                .toList();
+        var nullControlList= list.stream()
+                                            .filter(product -> product.getExpirationDate().equals(null))
+                                            .toList();
+        var productsList =
+                Stream.concat(expirationAfterList.stream(), nullControlList.stream())
                 .map(product -> modelMapper.map(product,ProductResponse.class))
                 .collect(Collectors.toList());
-        return findProductsByExpirationAfter;
+        return productsList;
     }
 
 }
