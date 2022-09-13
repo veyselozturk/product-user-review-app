@@ -38,12 +38,12 @@ public class ProductController{
         return productService.createProduct(request);
     }
     @GetMapping("/getReviews/{productId}")
-    public List<ReviewResponse> findReviewsByProductID(@PathVariable Long productId){
-        return productService.findReviewsByProductID(productId);
+    public List<ReviewResponse> findReviewsByProductID(@RequestParam ReviewRequest request){
+        return productService.findReviewsByProductID(request.getProductId());
     }
 
     @GetMapping("/getReviewsByDateRangeAndProductID")
-    public List<ReviewResponse> findReviewsByDateRangeAndProductID(@RequestBody ProductRequest request){
+    public List<ReviewResponse> findReviewsByDateRangeAndProductID(@RequestBody ReviewRequest request){
         return productService.findReviewsByDateRangeAndProductID(request);
     }
 
@@ -58,12 +58,12 @@ public class ProductController{
     }
 
     @GetMapping("/getProductsByExpirationAfter")
-    public List<ReviewResponse> findProductsByExpirationAfter(@RequestBody ProductRequest request){
+    public List<ProductResponse> findProductsByExpirationAfter(@RequestBody ProductRequest request){
         return productService.findProductsByExpirationAfter(request);
     }
 
     @GetMapping("/getProductsExpirationBefore")
-    public List<ReviewResponse> findProductsByExpirationBefore(@RequestBody ProductRequest request){
+    public List<ProductResponse> findProductsByExpirationBefore(@RequestBody ProductRequest request){
         return productService.findProductsByExpirationBefore(request);
     }
 

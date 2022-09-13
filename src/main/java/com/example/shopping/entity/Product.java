@@ -15,21 +15,18 @@ import java.util.List;
 @AllArgsConstructor
 
 @Entity
+@Table(name = "products")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String name;
-
     private String price; // double ?
-
     @Column(nullable = true)
     private Date expirationDate;
-
     @OneToMany
-    @JoinColumn
-    private List<Review> reviewId;
+    @JoinTable(name = "REVIEW_ID")
+    private List<Review> review;
 
 
 }

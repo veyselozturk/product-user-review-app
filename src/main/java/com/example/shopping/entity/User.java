@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.util.List;
-
+import java.util.Objects;
 
 @Data
 @Builder
@@ -21,22 +21,17 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @Size(max=50)
     private String name;
-
     @Size(max=50)
     private String surname;
-
     @Size(max=50)
     private String email;
-
     @Size(max=15)
     private String phone;
 
     @OneToMany
-    @JoinColumn
-    private List<Review> reviewId;
-
+    @JoinTable(name = "REVIEW_ID")
+    private List<Review> Review;
 
 }

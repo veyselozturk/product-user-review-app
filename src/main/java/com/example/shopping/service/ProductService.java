@@ -18,11 +18,11 @@ import java.util.Optional;
 public interface ProductService {
 
     List<ReviewResponse> findReviewsByProductID(Long productId);
-    List<ReviewResponse> findReviewsByDateRangeAndProductID(ProductRequest request);
+    List<ReviewResponse> findReviewsByDateRangeAndProductID(ReviewRequest request);
     List<ReviewResponse> findReviewsByUserID(Long userId);
     List<ReviewResponse> findReviewsByDateRangeAndUserID(ReviewRequest request);
-    List<ReviewResponse> findProductsByExpirationAfter(ProductRequest request);
-    List<ReviewResponse> findProductsByExpirationBefore(ProductRequest request);
+    List<ProductResponse> findProductsByExpirationAfter(ProductRequest request);
+    List<ProductResponse> findProductsByExpirationBefore(ProductRequest request);
 
     Optional<UserResponse> createUser (UserRequest request);
     Optional<ReviewResponse> createReview (ReviewRequest request);
