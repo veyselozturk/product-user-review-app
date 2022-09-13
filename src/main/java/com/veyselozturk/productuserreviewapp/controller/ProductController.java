@@ -1,12 +1,12 @@
-package com.example.shopping.controller;
+package com.veyselozturk.productuserreviewapp.controller;
 
-import com.example.shopping.dto.request.ProductRequest;
-import com.example.shopping.dto.request.ReviewRequest;
-import com.example.shopping.dto.request.UserRequest;
-import com.example.shopping.dto.response.ProductResponse;
-import com.example.shopping.dto.response.ReviewResponse;
-import com.example.shopping.dto.response.UserResponse;
-import com.example.shopping.service.ProductService;
+import com.veyselozturk.productuserreviewapp.dto.request.ProductRequest;
+import com.veyselozturk.productuserreviewapp.dto.request.ReviewRequest;
+import com.veyselozturk.productuserreviewapp.dto.request.UserRequest;
+import com.veyselozturk.productuserreviewapp.dto.response.ProductResponse;
+import com.veyselozturk.productuserreviewapp.dto.response.ReviewResponse;
+import com.veyselozturk.productuserreviewapp.dto.response.UserResponse;
+import com.veyselozturk.productuserreviewapp.service.ProductService;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.annotation.RequestScope;

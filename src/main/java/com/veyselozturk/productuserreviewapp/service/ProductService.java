@@ -1,11 +1,11 @@
-package com.example.shopping.service;
+package com.veyselozturk.productuserreviewapp.service;
 
-import com.example.shopping.dto.request.ProductRequest;
-import com.example.shopping.dto.request.ReviewRequest;
-import com.example.shopping.dto.request.UserRequest;
-import com.example.shopping.dto.response.ProductResponse;
-import com.example.shopping.dto.response.ReviewResponse;
-import com.example.shopping.dto.response.UserResponse;
+import com.veyselozturk.productuserreviewapp.dto.request.ProductRequest;
+import com.veyselozturk.productuserreviewapp.dto.request.ReviewRequest;
+import com.veyselozturk.productuserreviewapp.dto.request.UserRequest;
+import com.veyselozturk.productuserreviewapp.dto.response.ProductResponse;
+import com.veyselozturk.productuserreviewapp.dto.response.ReviewResponse;
+import com.veyselozturk.productuserreviewapp.dto.response.UserResponse;
 
 import java.util.List;
 import java.util.Optional;

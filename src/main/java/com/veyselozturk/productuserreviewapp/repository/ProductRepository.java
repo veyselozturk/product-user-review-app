@@ -1,7 +1,7 @@
-package com.example.shopping.repository;
+package com.veyselozturk.productuserreviewapp.repository;
 
 
-import com.example.shopping.entity.Product;
+import com.veyselozturk.productuserreviewapp.entity.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,18 +1,18 @@
-package com.example.shopping.service.business;
+package com.veyselozturk.productuserreviewapp.service.business;
 
-import com.example.shopping.dto.request.ProductRequest;
-import com.example.shopping.dto.request.ReviewRequest;
-import com.example.shopping.dto.request.UserRequest;
-import com.example.shopping.dto.response.ProductResponse;
-import com.example.shopping.dto.response.ReviewResponse;
-import com.example.shopping.dto.response.UserResponse;
-import com.example.shopping.entity.Product;
-import com.example.shopping.entity.Review;
-import com.example.shopping.entity.User;
-import com.example.shopping.repository.ProductRepository;
-import com.example.shopping.repository.ReviewRepository;
-import com.example.shopping.repository.UserRepository;
-import com.example.shopping.service.ProductService;
+import com.veyselozturk.productuserreviewapp.dto.request.UserRequest;
+import com.veyselozturk.productuserreviewapp.dto.response.ProductResponse;
+import com.veyselozturk.productuserreviewapp.dto.response.ReviewResponse;
+import com.veyselozturk.productuserreviewapp.dto.response.UserResponse;
+import com.veyselozturk.productuserreviewapp.entity.Product;
+import com.veyselozturk.productuserreviewapp.entity.Review;
+import com.veyselozturk.productuserreviewapp.entity.User;
+import com.veyselozturk.productuserreviewapp.repository.ProductRepository;
+import com.veyselozturk.productuserreviewapp.repository.ReviewRepository;
+import com.veyselozturk.productuserreviewapp.repository.UserRepository;
+import com.veyselozturk.productuserreviewapp.service.ProductService;
+import com.veyselozturk.productuserreviewapp.dto.request.ProductRequest;
+import com.veyselozturk.productuserreviewapp.dto.request.ReviewRequest;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 

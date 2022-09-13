@@ -1,4 +1,4 @@
-package com.example.shopping.dto.response;
+package com.veyselozturk.productuserreviewapp.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

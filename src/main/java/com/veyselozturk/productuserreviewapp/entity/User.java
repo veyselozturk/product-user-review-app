@@ -1,4 +1,4 @@
-package com.example.shopping.entity;
+package com.veyselozturk.productuserreviewapp.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
